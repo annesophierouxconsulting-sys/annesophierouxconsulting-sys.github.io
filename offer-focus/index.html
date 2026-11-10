@@ -293,6 +293,12 @@ body {
   text-transform: uppercase;
   color: rgba(244, 236, 211, 0.72);
 }
+.hero-proof-name { white-space: nowrap; }
+.hero-proof-name::after { content: " ·"; }
+@media (max-width: 639px) {
+  .hero-proof-name { display: block; }
+  .hero-proof-name::after { content: none; }
+}
 .hero-proof-more {
   display: flex;
   align-items: center;
@@ -1524,7 +1530,7 @@ body {
       <figure class="hero-proof-item">
         <img class="hero-proof-photo" src="assets/daouila-salmi.jpg" alt="" width="36" height="36" decoding="async">
         <blockquote><p>«&nbsp;Une capacité à mettre le doigt exactement là où ça bloque.&nbsp;»</p></blockquote>
-        <figcaption>Daouila Salmi · Formatrice</figcaption>
+        <figcaption><span class="hero-proof-name">Daouila Salmi</span> <span class="hero-proof-role">Consultante, Business Mentor, Executive Coach HEC &amp; Praticienne</span></figcaption>
       </figure>
       <div class="hero-proof-more">
         <!-- À ACTIVER quand les 3 témoignages seront réels : photos groupées + libellé
@@ -1733,7 +1739,7 @@ body {
             <img class="testi-photo" src="assets/daouila-salmi.jpg" alt="Portrait de Daouila Salmi" width="48" height="48" loading="lazy" decoding="async">
             <span class="testi-person-info">
               <span class="testi-name">Daouila Salmi</span>
-              <span class="testi-role">Formatrice, fondatrice de l'Arche des Leaders Inspirés</span>
+              <span class="testi-role">Consultante, Business Mentor, Executive Coach HEC &amp; Praticienne · Fondatrice de l'Arche des Leaders Inspirés</span>
             </span>
           </figcaption>
         </figure>
