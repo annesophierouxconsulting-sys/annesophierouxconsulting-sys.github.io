@@ -310,7 +310,7 @@ img { max-width: 100%; height: auto; display: block; }
   margin-bottom: 4px;
 }
 .finding-proof strong small { font-size: 0.55em; color: var(--ink-mute); }
-.finding-viz { margin-top: 12px; min-height: 30px; align-items: flex-end; align-content: flex-end; }
+.finding-viz { margin-top: 12px; min-height: 42px; align-items: flex-end; align-content: flex-end; }
 .viz-sections { display: flex; gap: 4px; }
 .viz-sections span { width: 16px; height: 28px; background: var(--ink-a08); border: 1px solid var(--ink-a15); }
 .viz-sections .is-dup { background: rgba(164, 69, 44, 0.18); border-color: var(--alert); }
@@ -318,9 +318,12 @@ img { max-width: 100%; height: auto; display: block; }
 .viz-screens span { width: 16px; height: 28px; border: 1px solid var(--ink-a15); }
 .viz-screens .is-scrolled { background: var(--ink-a08); }
 .viz-screens .is-buy { border-color: var(--alert); background: rgba(164, 69, 44, 0.18); }
-.viz-books { display: flex; gap: 4px; flex-wrap: wrap; }
-.viz-books span { width: 12px; height: 18px; border: 1px solid var(--ink-a15); border-radius: 1px; }
-.viz-books .is-rated { border-color: var(--champagne-fonce); background: rgba(140, 106, 44, 0.15); }
+.viz-card { display: flex; align-items: center; gap: 10px; padding: 6px 10px 6px 6px; border: 1px solid var(--ink-a15); background: rgba(255,255,255,0.45); max-width: 280px; }
+.viz-card-cover { width: 20px; height: 28px; flex: none; background: #1E2A3A; }
+.viz-card-body { display: flex; flex-direction: column; gap: 5px; flex: none; }
+.viz-card-title { width: 64px; height: 5px; background: var(--ink-a15); }
+.viz-card-price { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.04em; color: var(--ink-soft); }
+.viz-card-missing { margin-left: auto; padding: 5px 8px; border: 1px dashed var(--alert); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.04em; color: var(--alert); opacity: 0.85; white-space: nowrap; }
 .viz-contrast { display: flex; gap: 8px; }
 .viz-contrast span {
   font-family: var(--font-mono);
@@ -859,8 +862,10 @@ a.shot-frame::after {
           <h3>Les vrais atouts restent cachés.</h3>
           <p>Des avis à 5/5 aux verbatims concrets, mais dispersés dans la description et un onglet. Un argument cadeau enfoui en milieu de page. Aucun autre livre proposé, alors que le port est fixe à 5&nbsp;€.</p>
           <p class="finding-proof"><strong>12 <small>livres sur 14</small></strong>notés 5/5, sans que le catalogue ni la home ne le montrent.</p>
-          <div class="finding-viz viz-books" aria-hidden="true">
-            <span class="is-rated"></span><span class="is-rated"></span><span class="is-rated"></span><span class="is-rated"></span><span class="is-rated"></span><span class="is-rated"></span><span class="is-rated"></span><span class="is-rated"></span><span class="is-rated"></span><span class="is-rated"></span><span class="is-rated"></span><span class="is-rated"></span><span></span><span></span>
+          <div class="finding-viz viz-card" aria-hidden="true">
+            <span class="viz-card-cover"></span>
+            <span class="viz-card-body"><span class="viz-card-title"></span><span class="viz-card-price">30,00 €</span></span>
+            <span class="viz-card-missing">★★★★★ 5/5</span>
           </div>
         </li>
       </ol>
